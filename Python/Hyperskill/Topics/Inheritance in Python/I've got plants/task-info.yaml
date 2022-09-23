@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: type(opuntia) == Cactus
+- text: isinstance(basil, Plant)
+- text: type(basil) == object
+- text: isinstance(opuntia, Plant)
+- text: type(basil) == Cactus
+- text: type(opuntia) == Plant
+- text: isinstance(opuntia, object)
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7236#comment
+status: Unchecked
+record: -1

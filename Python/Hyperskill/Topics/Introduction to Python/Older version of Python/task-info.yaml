@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Python 2 is not used at all now
+- text: Python 2 is more convenient for data science and used particularly for this
+    purpose
+- text: Python 2 is still more popular than Python 3
+- text: Some projects use Python 3, while others are still written in Python 2
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11880#comment
+status: Solved
+record: -1

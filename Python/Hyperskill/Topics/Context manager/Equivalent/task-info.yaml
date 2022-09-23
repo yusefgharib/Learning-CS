@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: f = open('alien.txt', 'w')<br>f.write('Take us to your leader!')<br>close(f)
+- text: f = open('alien.txt', 'w')<br>f.write('Take us to your leader!')
+- text: f = open('alien.txt', 'w')<br>f.write('Take us to your leader!')<br>f.close()
+- text: open('alien.txt', 'w')<br>write('Take us to your leader!')<br>close()
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8705#comment
+status: Unchecked
+record: -1

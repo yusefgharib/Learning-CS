@@ -1,0 +1,101 @@
+type: edu
+files:
+- name: duskers/duskers.py
+  visible: true
+  text: "class Duskers:\n    def __init__(self):\n        self.name, self.main_choice\
+    \ = '', ''\n        self.valid_choices = [\"play\", \"high\", \"help\", \"exit\"\
+    , \"back\"]\n        self.title = (\"\\n\"\n                      \"║    █████\
+    █╗ ██╗   ██╗███████╗██╗  ██╗███████╗██████╗ ███████╗   ║\\n\"\n              \
+    \        \"║    ██╔══██╗██║   ██║██╔════╝██║ ██╔╝██╔════╝██╔══██╗██╔════╝   ║\\\
+    n\"\n                      \"║    ██║  ██║██║   ██║███████╗█████╔╝ █████╗  ███\
+    ███╔╝███████╗   ║\\n\"\n                      \"║    ██║  ██║██║   ██║╚════██║\
+    ██╔═██╗ ██╔══╝  ██╔══██╗╚════██║   ║\\n\"\n                      \"║    ██████\
+    ╔╝╚██████╔╝███████║██║  ██╗███████╗██║  ██║███████║   ║\\n\"\n               \
+    \       \"║    ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝   ║\\\
+    n\")\n\n    def title_menu(self):\n        print(self.title)\n\n    def menu(self):\n\
+    \        self.title_menu()\n        self.process_choice()\n\n    @staticmethod\n\
+    \    def exit_game():\n        print(\"Coming SOON! Thanks for playing!\")\n \
+    \       exit()\n\n    def process_choice(self):\n        main_choice = input(\"\
+    [Play]\\n[High] Scores\\n[Help]\\n[Exit]\\n\").lower()\n        while main_choice\
+    \ not in self.valid_choices:\n            print(\"Invalid input\")\n         \
+    \   main_choice = input(\"\\t\\t\\t\\t[Play]\\t\\t\\t[High] Scores\\t\\t\\t\\\
+    t\\n\\t\\t\\t\\t[Help]\\t\\t\\t[Exit]\\n\").lower()\n        if main_choice ==\
+    \ 'exit':\n            self.exit_game()\n        elif main_choice == 'play':\n\
+    \            self.name = input(\"Enter your name:\")\n            print(\"\\nGreetings,\
+    \ commander {}\".format(self.name))\n            print(\"Are you ready to begin?\\\
+    n[Yes] [No] Return to Main[Menu]\\n\")\n            ready = input(\"Your command:\
+    \ \").lower()\n            while ready not in ['yes', 'menu']:\n             \
+    \   print(\"Invalid input\")\n                print(\"Are you ready to begin?\\\
+    n[Yes] [No] Return to Main[Menu]\\n\")\n                ready = input(\"Your command:\
+    \ \\n\")\n            if ready == 'menu':\n                self.menu()\n     \
+    \       elif ready == 'yes':\n                self.play()\n        elif main_choice\
+    \ == 'help':\n            self.help()\n        elif main_choice == 'high':\n \
+    \           self.scores()\n\n    def play(self):\n        print(\"\"\"║═══════\
+    ═════════════════════════════════════════════════════════════════════════║\n\n\
+    \         ▄▄▄▄▄                    ▄▄▄▄▄                    ▄▄▄▄▄           \n\
+    \        █ v v █                  █ v v █                  █ v v █          \n\
+    \         ▀▀█▀▀                    ▀▀█▀▀                    ▀▀█▀▀           \n\
+    \        █▀▀█▀▀█                  █▀▀█▀▀█                  █▀▀█▀▀█          \n\
+    \          █ █                      █ █                      █ █            \n\
+    \         █   █                    █   █                    █   █           \n\
+    \n║═══════════════════════════════════════════════════════════════════════════\
+    ═════║\n║                  [Ex]plore                          [Up]grade      \
+    \            ║\n║                  [Save]                             [M]enu \
+    \                    ║\n║═════════════════════════════════════════════════════\
+    ═══════════════════════════║\"\"\")\n        choice = input(\"Your command:\"\
+    ).lower()\n        if choice == 'save':\n            print(\"Coming SOON! Thanks\
+    \ for playing!\")\n            exit()\n        elif choice == 'm':\n         \
+    \   self.pause()\n        elif choice == 'up':\n            print(\"Coming SOON!\
+    \ Thanks for playing!\")\n            exit()\n        elif choice == 'ex':\n \
+    \           print(\"Coming SOON! Thanks for playing!\")\n            exit()\n\n\
+    \    def pause(self):\n        print(\"\"\"                \n                \
+    \        ║════════════════════════║\n                        ║          MENU \
+    \         ║ \n                        ║════════════════════════║\n           \
+    \             ║     [Back] to game     ║\n                        ║  Return to\
+    \ [Main] Menu ║\n                        ║     [Save] and exit    ║\n        \
+    \                ║       [Exit] game      ║\n                        ║════════\
+    ════════════════║\"\"\")\n        choice = input(\"\\nYour command:\").lower()\n\
+    \        if choice == 'back':\n            self.play()\n        elif choice ==\
+    \ 'main':\n            self.menu()\n        elif choice == 'save':\n         \
+    \   print(\"Coming SOON! Thanks for playing!\")\n            exit()\n        elif\
+    \ choice == 'exit':\n            print(\"Coming SOON! Thanks for playing!\")\n\
+    \            exit()\n\n    def scores(self):\n        print(\"No scores to display.\"\
+    )\n        choice = input(\"[Back]\").lower()\n        while choice != 'back':\n\
+    \            print(\"Invalid input\")\n            choice = input(\"[Back]\").lower()\n\
+    \        self.menu()\n\n    @staticmethod\n    def help():\n        print(\"Coming\
+    \ SOON! Thanks for playing!\")\n        exit()\n\n\nd = Duskers()\nd.menu()\n"
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from hstest import StageTest
+    from utils.global_tests import GlobalDuskersTest
+    from utils.from_stage4_tests import FromStage4DuskersTest
+
+    MODULE_NAME = 'duskers.duskers'
+    STAGE_NO = 4
+
+
+    class DuskersTest(StageTest):
+        # no tests specific to just this stage
+        pass
+
+
+    if __name__ == '__main__':
+        # run tests that are shared among more than 1 stage
+        return_code = GlobalDuskersTest(STAGE_NO, MODULE_NAME).run_tests()[0]
+        # run tests specific to this stage if global tests pass
+
+        suites = [
+            FromStage4DuskersTest(STAGE_NO, MODULE_NAME),
+            # DuskersTest(MODULE_NAME) # uncomment when adding stage4 specific tests
+        ]
+        current_suite = 0
+
+        while return_code == 0 and current_suite < len(suites):
+            return_code = suites[current_suite].run_tests()[0]
+            current_suite += 1
+  learner_created: false
+feedback_link: https://hyperskill.org/projects/136/stages/727/implement#comment
+status: Solved
+record: 3

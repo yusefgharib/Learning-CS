@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: my_list[1][2][0]
+- text: my_list[1][2][1]
+- text: my_list[2][0]
+- text: my_list[3, 0]
+- text: my_list[2][3]
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6940#comment
+status: Solved
+record: -1

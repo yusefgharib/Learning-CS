@@ -1,0 +1,11 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Point:
+        pass
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9518#comment
+status: Unchecked
+record: -1

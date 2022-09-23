@@ -1,0 +1,13 @@
+custom_name: 'Requests: retrieving data'
+content:
+- Theory
+- Bytes
+- HTTP requests
+- GET request
+- URL
+- Query strings
+- Success or fail
+- Content type
+- Searching for a book
+- Test for attentiveness
+- Reading the response

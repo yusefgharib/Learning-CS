@@ -1,0 +1,49 @@
+<h2>Display the message</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Take a look at the following code snippets. Which of them will print the error traceback with the message <code class="language-python">DateDelimiterError: You should use the '/' sign as a delimiter.</code>? Choose all the correct options.</p> 
+  <p><strong>A</strong>.</p> 
+  <pre><code class="language-python">class DateDelimiterError(Exception):
+    print("You should use the '/' sign as a delimiter.")
+
+
+date = input()
+if '/' not in date:
+    raise DateDelimiterError
+else:
+    print(date)</code></pre> 
+  <p><strong>B</strong>.</p> 
+  <pre><code class="language-python">class DateDelimiterError(Exception):
+    pass
+
+
+date = input()
+if '/' not in date:
+    raise DateDelimiterError("You should use the '/' sign as a delimiter.")
+else:
+    print(date)</code></pre> 
+  <p><strong>C</strong>.</p> 
+  <pre><code class="language-python">class DateDelimiterError(Exception):
+    def __str__(self):
+        return "You should use the '/' sign as a delimiter."
+
+
+date = input()
+if '/' not in date:
+    print(DateDelimiterError)
+else:
+    print(date)</code></pre> 
+  <p><strong>D</strong>.</p> 
+  <pre><code class="language-python">class DateDelimiterError(Exception):
+    def __str__(self):
+        return "You should use the '/' sign as a delimiter."
+
+
+date = input()
+if '/' not in date:
+    raise DateDelimiterError
+else:
+    print(date)</code></pre>
+ </body>
+</html>

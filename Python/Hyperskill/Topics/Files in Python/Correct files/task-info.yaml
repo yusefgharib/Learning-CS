@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: file1 = open('file1.txt')
+- text: file2 = open('file2.txt', 'rb', encoding='utf-8')
+- text: file3 = open('file3.txt', 'abt')
+- text: file4 = open('file4.txt', 'w+', encoding='utf-16')
+- text: file5 = open()
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8694#comment
+status: Solved
+record: -1

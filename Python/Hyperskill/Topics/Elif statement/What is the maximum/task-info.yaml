@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Not more than the number of ifs in this conditional
+- text: Only one
+- text: Depends on the condition
+- text: Approximately a hundred
+- text: As many as you wish
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6527#comment
+status: Solved
+record: -1

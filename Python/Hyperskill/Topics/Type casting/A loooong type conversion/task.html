@@ -1,0 +1,19 @@
+<h2>A loooong type conversion</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Look at some type conversions below and find out what will be in the output:</p> 
+  <pre><code class="language-python">n = 2.777
+print(str(float(int(n))))</code></pre> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-173').style.display='inline'"> Hint </button> </p>
+  <div id="hint-173" style="display:none;">
+   When you convert a floating-point number to an integer, its fractional part is ignored, e.g. 
+   <code class="language-python">int(3.14)</code> produces 
+   <code class="language-python">3</code>. The other way around, an integer takes on a trailing zero to become a float, e.g. 
+   <code class="language-python">float(3)</code> equals 
+   <code class="language-python">3.0</code>. Quotes enclose your number converted to a string, but think about whether they are 
+   <em>printed </em>after all.
+  </div>
+  <p></p>
+ </body>
+</html>

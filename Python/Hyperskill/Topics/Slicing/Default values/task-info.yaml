@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: '<b>start</b>: 0'
+- text: '<b>start</b>: 1'
+- text: '<b>stop</b>: len(sequence)'
+- text: '<b>stop</b>: len(sequence) - 1'
+- text: '<b>step</b>: 0'
+- text: '<b>step</b>: 1'
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6178#comment
+status: Unchecked
+record: -1

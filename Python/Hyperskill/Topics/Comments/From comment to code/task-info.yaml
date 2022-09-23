@@ -1,0 +1,9 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: '# prints "ok" without quotes'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6790#comment
+status: Solved
+record: -1

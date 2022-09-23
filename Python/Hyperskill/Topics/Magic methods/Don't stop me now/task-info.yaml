@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Queen — Don't stop me now (1979)
+- text: '&lt;__main__.Song object at 0x110e8b7b8&gt;'
+- text: 'Artist: Queen. Name: Don''t stop me now. Year: 1979'
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7142#comment
+status: Solved
+record: -1

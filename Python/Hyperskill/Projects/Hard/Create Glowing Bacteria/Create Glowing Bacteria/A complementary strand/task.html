@@ -1,0 +1,30 @@
+<html><body><h5 id="description">Description</h5>
+<ul>
+</ul>
+<p>To give the bacteria new properties, we have to start by modifying the plasmid.</p>
+<p>Typically, a bacterial plasmid looks like a huge four-letter text (A, T, C, G). It has a header denoted by the symbol "&gt;", in which you can find a description of the organism and key information about the sequence. Everything else is the sequence itself.</p>
+<pre><code class="language-python">&gt;MK753227.1 Escherichia coli str. K-12, partial sequence
+GACGTCTGTGCAAGTACTACTGTTCTGCAGTCACTTGAATTCGATACCCAGCTGTGTGCACTACCTCCTT
+GGTTGTCTATGCTATGCTGATCTACAACTGGCATGCGGTCAGTGCGTCCTGCTGATGTGCTCAGTATCTC
+TATCACTGATAGGGATGTCAATCTCTATCACTGATAGGGAAACGTTTCGCAGAAGCTTCCGCAAGGTACC
+...</code></pre>
+<p>Now you are looking at a sequence of a bacterial plasmid. Alas, it's just a single <strong>strand </strong>(single DNA chain). Before modification, we need to create a second complementary strand. To get it, replace each element of the original sequence with its opposite according to the <strong>complementarity principle</strong>:</p>
+<p>Adenine (A) &lt;-&gt; Thymine (T);<br/>
+Cytosine (C) &lt;-&gt; Guanine (G).</p>
+<p> For instance, if the sequence is TTAGCGCA your answer should be AATCGCGT.</p>
+<p><img alt="" height="104" name="Безымянный.png" src="https://ucarecdn.com/c2ac2217-a1b1-4d08-a3c8-e484346274a3/" width="434"/></p>
+<h5 id="objectives">Objectives</h5>
+<p>At this stage, you will create the complementary plasmid strand. Use only the first line of the plasmid sequence above. It looks as follows:</p>
+<pre><code class="language-python">GACGTCTGTGCAAGTACTACTGTTCTGCAGTCACTTGAATTCGATACCCAGCTGTGTGCACTACCTCCTT</code></pre>
+<ol>
+<li>Input the sequence of the original strand;</li>
+<li>Print the complementary strand as an answer.</li>
+</ol>
+<p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-1719').style.display='inline'">
+        Hint
+      </button>
+</p><div id="hint-1719" style="display:none;">Advice: you may write a function that automates this action. It will be useful in the following stages. In your output, print only the sequence of the complementary plasmid strand.</div>
+<h5 id="example">Example</h5>
+<p>The greater-than symbol followed by a space (&gt; ) represents the console input.</p>
+<pre><code class="language-python">&gt; TTAGCGCA
+AATCGCGT # the output starts here</code></pre></body></html>

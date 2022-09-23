@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: The program is executed until the end ignoring the line with an exception.
+- text: The program is executed until the line with an exception and then it returns
+    a traceback.
+- text: The program crashes with traceback before being executed.
+- text: 'The program prompts a programmer for confirmation before execution. '
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6044#comment
+status: Solved
+record: -1

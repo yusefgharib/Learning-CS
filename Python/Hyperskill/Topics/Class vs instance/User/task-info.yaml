@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class User:
+        # create the class attributes
+
+        # create the __init__ method
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6681#comment
+status: Unchecked
+record: -1

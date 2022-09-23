@@ -1,0 +1,74 @@
+import numpy as np
+class Tetris:
+    def __init__(self):
+        self.piece = input()
+        self.col, self.row = map(int, input().split())
+        self.grid = np.array([['-' for i in range(self.col)] for _ in range(self.row)])
+        self.pieces = {'O': [[(0, 4), (0, 5), (1, 4), (1, 5)]],
+                       'I': [[(0, 4), (1, 4), (2, 4), (3, 4)], [(0, 3), (0, 4), (0, 5), (0, 6)]],
+                       'S': [[(0, 4), (0, 5), (1, 4), (1, 3)], [(0, 4), (1, 4), (1, 5), (2, 5)]],
+                       'Z': [[(0, 4), (0, 5), (1, 5), (1, 6)], [(0, 5), (1, 5), (1, 4), (2, 4)]],
+                       'L': [[(0, 4), (1, 4), (2, 4), (2, 5)], [(0, 5), (1, 5), (1, 4), (1, 3)], [(0, 4), (0, 5), (1, 5), (2, 5)], [(0, 4), (0, 5), (0, 6), (1, 4)]],
+                       'J': [[(0, 5), (1, 5), (2, 5), (2, 4)], [(1, 5), (0, 5), (0, 4), (0, 3)], [(0, 5), (0, 4), (1, 4), (2, 4)], [(0, 4), (1, 4), (1, 5), (1, 6)]],
+                       'T': [[(0, 4), (1, 4), (2, 4), (1, 5)], [(0, 4), (1, 3), (1, 4), (1, 5)], [(0, 5), (1, 5), (2, 5), (1, 4)], [(0, 4), (0, 5), (0, 6), (1, 5)]]}
+        self.rotation, self.down, self.horizontal = 0, 0, 0
+        self.print_grid(), 0,
+
+    def print_grid(self):
+        print()
+        for i in range(self.row):
+            print(*self.grid[i])
+
+    def set_initial_state(self):
+        for col, row in self.pieces[self.piece][0]:
+            self.grid[col][row] = '0'
+
+    def rotate(self, choice=''):
+        if '0' not in self.grid[self.row - 1]:
+            self.down += 1
+            if choice == 'rotate':
+                self.rotation += 1
+            if choice == 'right':
+                side = False
+                for i in range(self.row):
+                    if self.grid[i][self.col - 1] == '0':
+                        side = True
+                if not side:
+                    self.horizontal += 1
+            if choice == 'left':
+                side = False
+                for i in range(self.row):
+                    if self.grid[i][0] == '0':
+                        side = True
+                if not side:
+                    self.horizontal -= 1
+            if self.rotation >= len(self.pieces[self.piece]):
+                self.rotation = 0
+            for i in range(self.row):
+                for j in range(self.col):
+                    if self.grid[i][j] == '0':
+                        self.grid[i][j] = '-'
+                self.grid[i] = ['-' for _ in range(self.col)]
+            for row, col in self.pieces[self.piece][self.rotation]:
+                self.grid[row + self.down][col + self.horizontal] = '0'
+        else:
+            return self.grid
+        return self.grid
+
+
+tetris = Tetris()
+tetris.set_initial_state()
+tetris.print_grid()
+while True:
+    choice = input()
+    if choice == 'exit':
+        break
+    if choice == 'rotate':
+        tetris.rotate(choice)
+        tetris.print_grid()
+    if choice == 'right' or choice == 'left':
+        tetris.rotate(choice)
+        tetris.print_grid()
+    if choice == 'down':
+        tetris.rotate()
+        tetris.print_grid()

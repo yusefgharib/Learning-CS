@@ -1,0 +1,22 @@
+<h2>Find the magic</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Which of the methods of the class <code class="language-python">Person</code> are magic methods?</p> 
+  <pre><code class="language-python">class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.friends = []
+
+    def greet(self):
+        print("Hello, I am {}".format(self.name))
+
+    def make_friends(self, other):
+        self.friends.append(other)
+        print("{} is now friends with {}".format(self.name, other.name))
+
+    def __str__(self):
+        return "{}, {} years old".format(self.name, self.age)</code></pre>
+ </body>
+</html>

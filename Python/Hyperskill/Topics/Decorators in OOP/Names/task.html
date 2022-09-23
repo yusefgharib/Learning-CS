@@ -1,0 +1,24 @@
+<h2>Names</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Look at the definition of the class below. Which of the methods is static?</p> 
+  <pre><code class="language-python">class Person:
+
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        return 'Hello, my name is {}'.format(self.name)
+
+    def make_uppercase(self):
+        name_uppercase = self.name.title()
+        return '{} has been converted to {}'.format(self.name, name_uppercase)
+
+    def check_string(self, string):
+        if len(string) &gt; 1:
+            return string
+        else:
+            return 'Try entering other name!'</code></pre>
+ </body>
+</html>

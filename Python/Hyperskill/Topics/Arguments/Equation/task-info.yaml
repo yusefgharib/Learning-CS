@@ -1,0 +1,11 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def equation_writing(...):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10302#comment
+status: Solved
+record: -1

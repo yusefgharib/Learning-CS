@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: To implement multiple inheritance.
+- text: To structure your code.
+- text: To override a parent class method.
+- text: To call the parent class method inside of a child class method.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15827#comment
+status: Failed
+feedback:
+  message: Answer choices will be shuffled next time.
+  time: Sat, 16 Jul 2022 10:41:55 UTC
+record: -1
+custom_name: What's the purpose?

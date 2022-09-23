@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Car.drive(self)
+- text: my_car.drive()
+- text: my_car.drive(self)
+- text: Car.drive(my_car)
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6933#comment
+status: Unchecked
+record: -1

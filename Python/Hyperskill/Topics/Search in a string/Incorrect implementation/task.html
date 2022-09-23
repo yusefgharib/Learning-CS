@@ -1,0 +1,21 @@
+<h2>Incorrect implementation</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Below is the described substring searching algorithm:</p> 
+  <pre><code class="language-python">def contains(text, pattern):
+    for i in range(len(text) - len(pattern)):
+        found = True
+
+        for j in range(len(pattern)):
+            if text[i + j] != pattern[j]:
+                found = False
+                break
+
+        if found:
+            return True
+
+    return False</code></pre> 
+  <p>This version contains a mistake. Select all pairs of strings (the first is <code class="language-python">text</code>, the second is <code class="language-python">pattern</code>), for which the algorithm above gives an incorrect output.</p>
+ </body>
+</html>

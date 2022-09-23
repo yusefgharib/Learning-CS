@@ -1,0 +1,31 @@
+<html><body><h5 id="description">Description</h5>
+<p>You have a double-stranded GFP sequence, excellent!</p>
+<p>Now we need to prepare the GFP to be able to insert it into the plasmid. In order to insert GFP into the plasmid, we need to make sticky ends. The insertion occurs as follows:</p>
+<p><img alt="" height="430" name="glowing_bacteria.png" src="https://ucarecdn.com/a8b60d3e-be08-4028-ae0e-a6de142433a0/" width="588"/></p>
+<p>We have already done step 1, and now we are at step 2. We need to cut the GFP sequence on both sides so that its ends fit the cut on the plasmid. If their cuts fit together, then we can insert the sequence into the plasmid in the next steps. </p>
+<p>Unlike plasmid, GFP has two sticky ends on the left and right sides, <code class="language-python">TGCA</code> and <code class="language-python">ACGT</code> respectively, because the <strong>insertion </strong>occurs<strong> </strong>in the middle of a plasmid gap.</p>
+<p>To visualize the process of restriction, you can watch the <a href="https://www.youtube.com/watch?v=GJrAsW41a64&amp;ab_channel=NicoleLantz" rel="noopener noreferrer nofollow" target="_blank">video</a> on YouTube by Nicole Lantz.</p>
+<p>Now, you need to obtain GFP with sticky ends. For GFP, the best restriction site is <code class="language-python">CTGCAG</code><strong> </strong>from the left<strong> </strong>and <code class="language-python">GTGCAC</code> from the right. Use them to avoid losing significant coding parts of the GFP gene. The positions are marked below:</p>
+<pre><code class="language-python">GCATGC_CTGCAG_GTCGACTCTAGAGGATCCCCGGGTACCTAGAATTAAAGAGGAGAAATTAAGCATGCGTAAAGGAGAAGAACTTTTCACTGGAGTTGTCCCAATTCTTGTTGAATTAGATGGTGATGTTAATGGGCACAAATTTCTGTCAGTGGAGAGGGTGAAGGTGATGCAACATACGGAAAACTTACCCTTAAATTTATTTGCACTACTGGAAAACTACCTGTTCCATGGCCAACACTTGTCACTACTTTCGGTTATGGTGTTCAATGCTTTGCGAGATACCCAGATCATATGAAACAGCATGACTTTTTCAAGAGTGCCATGCCCGAAGGTTATGTACAGGAAAGAACTATATTTTTCAAAGATGACGGGAACTACAAGACACGTGCTGAAGTCAAGTTTGAAGGTGATACCCTTGTTAATAGAATCGAGTTAAAAGGTATTGATTTTAAAGAAGATGGAAACATTCTTGGACACAAATTGGAATACAACTATAACTCACACAATGTATACATCATGGCAGACAAACAAAAGAATGGAATCAAAGTTAACTTCAAAATTAGACACAACATTGAAGATGGAAGCGTTCAACTAGCAGACCATTATCAACAAAATACTCCAATTGGCGATGGCCCTGTCCTTTTACCAGACAACCATTACCTGTCCACACAATCTGCCCTTTCGAAAGATCCCAACGAAAAGAGAGACCACATGGTCCTTCTTGAGTTTGTAACAGCTGCTGGGATTACACATGGCATGGATGAACTATACAAAAGGCCTGCAGCAAACGACGAAAACTACGCTTTAGTAGCTTAATAAGCTTAATTAGCTGACCTACTAGTCGGCCGTCTCGACATGAACGCAGGAAAGAACATGTGAGCAAAAGGCCAGCAAAAGGCCAGGAACCGTAAAAAGGCCGCGTTGCTGGCGTTTTTCCATAGGCTCCGCCCCCCTGACGAGCATCACAAAAATCGACGCTCAAGTCAGAGGTGGCGAAACCCGACAGGACTATAAAGATACCAGGCGTTTCCCCCTGGAAGCTCCCTCGTGCGCTCTCCTGTTCCGACCCTGCCGCTTACCGGATACCTGTCCGCCTTTCTCCCTTCGGGAAGCGTGGCGCTTTCTCAATGCTCACGCTGTAGGTATCTCAGTTCGGTGTAGGTCGTTCGCTCCAAGCTGGGCTGT_GTGCAC_GAACCCCCCGT</code></pre>
+<p>In your case, there will be no <code class="language-python">_</code> character in the original sequence. Don't create your code around it.</p>
+<p></p><div class="alert alert-warning">If there are multiple restriction sites in the GFP sequence, always use the sites closest to the edges of the GFP sequence. This action will avoid cutting the functional part of the GFP gene and losing its functionality.</div><p></p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Input the original GFP gene sequence and restriction sites from the console to cut GFP;</li>
+<li>To automate the action of getting the sticky ends in the GFP plasmid, we recommend implementing a function that will:
+	<ul>
+<li>Create complementary sequences for the GFP gene and for the restriction sites;</li>
+<li>Find the restriction site CTGCAG at the beginning of the sequence, and cut both strands: the original one between 1<sup>st</sup> and 2<sup>nd</sup> nucleotides, and the complementary one between 5<sup>th</sup> and 6<sup>th</sup> nucleotides. As a result of this step, we will get a protruding sticky end on the original GFP chain;</li>
+<li>Find the GTGCAC restriction site at the end of the sequence, and cut through it similarly to the previous point;</li>
+<li>Return the resulting GFP chains.</li>
+</ul>
+</li>
+<li>As a result, print the double-strand GFP sequence with sticky ends. The original and complementary strands should be separated by a newline character (<code class="language-python">\n</code>).</li>
+</ol>
+<h5 id="example">Example</h5>
+<p>The greater-than symbol followed by a space (<code class="language-python">&gt; </code>) represents the console input.</p>
+<p><strong>Example 1:</strong> <em>input of the original strand and the restriction sites</em></p>
+<pre><code class="language-python">&gt; CCTGCAGGTCGACTCTAGAGGATCCCCGGGTACCTAGAATTGCACGCA
+&gt; CTGCAG TTGCAC
+TGCAGGTCGACTCTAGAGGATCCCCGGGTACCTAGAAT  # the output starts here
+CCAGCTGAGATCTCCTAGGGGCCCATGGATCTTAACGT</code></pre></body></html>

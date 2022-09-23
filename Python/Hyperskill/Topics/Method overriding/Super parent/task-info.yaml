@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: If we use Python 2.X.
+- text: When we want to access a method in the 'grandparent' of the current class
+    rather than in its 'parent'.
+- text: When we have a hierarchy of classes.
+- text: Never if we use Python 3.X. In Python 3.X specifying the arguments doesn't
+    affect anything.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15825#comment
+status: Unchecked
+record: -1

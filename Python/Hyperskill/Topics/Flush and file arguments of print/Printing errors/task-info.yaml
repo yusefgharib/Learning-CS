@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: The string will be printed in a log file and will be marked as an error
+- text: An error will be raised with the string as the error's comment
+- text: The string will be printed in shell and look like an error message
+- text: The program will stop executing
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8010#comment
+status: Unchecked
+record: -1

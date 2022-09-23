@@ -1,0 +1,26 @@
+<html><body><h5 id="description">Description</h5>
+<p>In the previous stage, we obtained a double-strand bacterial plasmid. Now, you need to cut it at a certain place to make a gap. This particular place is called a <strong>restriction site</strong>. In nature, the cutting is provided by special enzymes called <strong>restrictases</strong>. They are like scissors. After cutting, <strong>sticky ends </strong>are formed. To get the sticky ends means to make a "diagonal" cut at the restriction site.<br/>
+An example of a cut is shown below:</p>
+<p><img alt="" height="260" name="Безымянный2.png" src="https://ucarecdn.com/3d1e9c73-09a6-41b9-8ecc-72f7b7241dc6/" width="502"/><br/>
+<br/>
+More information about the mechanisms of cutting and restriction enzymes can be found in the <a href="https://microbenotes.com/restriction-enzyme-restriction-endonuclease/" rel="noopener noreferrer nofollow" target="_blank">article</a> by Microbe Notes.</p>
+<h5 id="objectives">Objectives</h5>
+<p>Use the double-stranded plasmid sequence from the first step and cut it at the site with the <code class="language-python">CTGCAG</code> sequence between the 1<sup>st</sup> and 2<sup>nd</sup> nucleotides (letters) in the initial strand and between 5<sup>th</sup> and 6<sup>th</sup> nucleotides in the complementary one. So, your sequence for cutting is as follows:<br/>
+<em>original and complementary strands are separated by a space</em></p>
+<pre><code class="language-python">GACGTCTGTGCAAGTACTACTGTTCTGCAGTCACTTGAATTCGATACCCAGCTGTTATTTGTATAGTTCA CTGCAGACACGTTCATGATGACAAGACGTCAGTGAACTTAAGCTATGGGTCGACAATAAACATATCAAGT</code></pre>
+<p>To complete this stage you should:</p>
+<ol>
+<li>Input the original and the complementary strands separated by a space;</li>
+<li>Find the restriction site in the plasmid sequence;</li>
+<li>Cut the first DNA strand according to the first restriction site (between the<strong> </strong>first two nucleotides, which are <code class="language-python">C</code> and <code class="language-python">T</code>);</li>
+<li>Translate the original restriction site into a complementary one;</li>
+<li>In the complementary strand, find the complementary site and cut between the last two nucleotides<strong> </strong>to obtain the protruding ends;</li>
+<li>Print the two cut DNA strands.</li>
+</ol>
+<p>In your answer, include the sequences of both strands and mark the place of the cut with a single space. Place each strand on a separate line. Use capital letters only.</p>
+<h5 id="example">Example</h5>
+<p>The greater-than symbol followed by a space (&gt; ) represents the console input.</p>
+<p><strong>Example 1: </strong><em>The resulting cut along the </em><code class="language-python">CTGCAG</code><em> restriction site</em></p>
+<pre><code class="language-python">&gt; TGACTGCAGTTAG ACTGACGTCAATC
+TGAC TGCAGTTAG  # the output starts here
+ACTGACGT CAATC</code></pre></body></html>

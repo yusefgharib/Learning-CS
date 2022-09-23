@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: print('a', 'c', sep='_b_', end='_')
+- text: print('a', end='') <br> print('_', '_', sep='b', end='c_')
+- text: print('a', '_', 'b', '_', 'c', end='_')
+- text: print('a', 'b', 'c', sep='_', end='_')
+- text: print('a', sep='_') <br> print('b', sep='_') <br> print('c', sep='_')
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7453#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 10 Jul 2022 01:16:02 UTC
+record: -1
+selected_options:
+- 0
+- 1
+- 3
+custom_name: Combining seps & ends

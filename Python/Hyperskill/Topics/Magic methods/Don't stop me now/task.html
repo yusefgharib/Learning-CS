@@ -1,0 +1,23 @@
+<h2>Don't stop me now</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Here's a class <code class="language-python">Song</code>:</p> 
+  <pre><code class="language-python">class Song:
+    def __init__(self, artist, name, year):
+        self.artist = artist
+        self.name = name
+        self.year = year
+
+    def __repr__(self):
+        rep = "Artist: {}. Name: {}. Year: {}".format(self.artist, self.name,
+                                                      self.year)
+        return rep
+
+    def __str__(self):
+        return "{} — {} ({})".format(self.artist, self.name, self.year)</code></pre> 
+  <p>What will this code print?</p> 
+  <pre><code class="language-python">dsmn = Song("Queen", "Don't stop me now", 1979)
+print(dsmn)</code></pre>
+ </body>
+</html>

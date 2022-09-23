@@ -1,0 +1,11 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    file = open('test_file.txt', 'w')
+    file.write('This line will be in the file!')
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8697#comment
+status: Solved
+record: -1

@@ -1,0 +1,109 @@
+type: edu
+files:
+- name: duskers/duskers.py
+  visible: true
+  text: |
+    class Duskers:
+        def __init__(self):
+            self.main_choice = ''
+            self.title = self.title = """██████╗ ██╗   ██╗███████╗██╗  ██╗███████╗██████╗ ███████╗
+    ██╔══██╗██║   ██║██╔════╝██║ ██╔╝██╔════╝██╔══██╗██╔════╝
+    ██║  ██║██║   ██║███████╗█████╔╝ █████╗  ██████╔╝███████╗
+    ██║  ██║██║   ██║╚════██║██╔═██╗ ██╔══╝  ██╔══██╗╚════██║
+    ██████╔╝╚██████╔╝███████║██║  ██╗███████╗██║  ██║███████║
+    ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
+
+    """
+
+        def title_menu(self):
+            print(self.title)
+
+        def menu(self):
+            self.title_menu()
+            self.main_choice = input("[Play]\n[Exit]")
+            self.process_choice()
+
+        def exit_game(self):
+            print("Goodbye loser!")
+            exit()
+
+        def process_choice(self):
+            while self.main_choice.lower() not in ['exit', 'play']:
+                print("Invalid input")
+                self.main_choice = input("[Play]\n[Exit]")
+            if self.main_choice.lower() == 'exit':
+                self.exit_game()
+            elif self.main_choice.lower() == 'play':
+                self.play()
+
+        def play(self):
+            name = input("Enter your name:")
+            ready = input(f"{name}, are you ready to begin?\n[Yes] [No]")
+            while ready.lower() not in 'yes':
+                print("Invalid input")
+                ready = input(f"{name}, are you ready to begin?\n[Yes] [No]")
+            if ready.lower() == 'yes':
+                print("Great, now let's go code some more ;)")
+
+
+    d = Duskers()
+    d.menu()
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from hstest import CheckResult, StageTest, TestedProgram, dynamic_test
+    from utils.global_tests import CASE_INSENSITIVITY_REMINDER, GlobalDuskersTest
+
+    MODULE_NAME = 'duskers.duskers'
+    STAGE_NO = 2
+
+
+    class DuskersTest(StageTest):
+
+        @dynamic_test
+        def test_keep_asking_for_readiness(self):
+            pr = TestedProgram()
+            pr.start()
+            pr.execute("play")
+            ready_prompt = "\n".join(pr.execute("hyperskill").split("\n")[-2:])
+
+            for _ in range(3):
+                re_ready_prompt = pr.execute("no")
+
+                if ready_prompt not in re_ready_prompt:
+                    return CheckResult.wrong(
+                        "You must keep asking the player if they are ready until "
+                        "they choose [Yes] if they chose [No] when asked if ready.\n"
+                        + CASE_INSENSITIVITY_REMINDER
+                    )
+
+            hub = pr.execute("yes")
+
+            if not hub:
+                return CheckResult.wrong(
+                    "No hub found after selecting finally selecting yes from the "
+                    "ready menu. For now this hub can be anything.\n"
+                    "Take a look where you continuosly ask the player if they're "
+                    "ready.\n" + CASE_INSENSITIVITY_REMINDER
+                )
+
+            if not pr.is_finished():
+                return CheckResult.wrong(
+                    "Your program should finish when the player finally decides "
+                    "that they're ready."
+                )
+
+            return CheckResult.correct()
+
+
+    if __name__ == '__main__':
+        # run tests that are shared among more than 1 stage
+        return_code = GlobalDuskersTest(STAGE_NO, MODULE_NAME).run_tests()[0]
+        # run tests specific to this stage if global tests pass
+        if return_code == 0:
+            DuskersTest(MODULE_NAME).run_tests()
+  learner_created: false
+feedback_link: https://hyperskill.org/projects/136/stages/725/implement#comment
+status: Solved
+record: 1

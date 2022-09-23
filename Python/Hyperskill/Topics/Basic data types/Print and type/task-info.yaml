@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: '<code>type("This is a string")</code> <br> <code>print("This is a string")</code> '
+- text: <code>print('This is a string')</code> <br> <code>type('This is a string')</code>
+- text: <code>print("This is a string")</code> <br> <code>type("This is a string")</code>
+- text: <code>print("This is a string")</code> <br> <code>typed("This is a string")</code>
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/20402#comment
+status: Solved
+record: -1

@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: By spaces you type.
+- text: By newline escape sequences.
+- text: By commas.
+- text: By dots.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15104#comment
+status: Solved
+record: -1

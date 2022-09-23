@@ -1,0 +1,3 @@
+seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
+CONVERSION = 86400
+print([int(nums / CONVERSION) for nums in seconds])

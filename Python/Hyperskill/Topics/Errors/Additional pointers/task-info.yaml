@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: You cannot find the exact place.
+- text: In a traceback, there is an index corresponding to the position in the line
+    where the mistake is found.
+- text: In a traceback, there is an arrow pointing to the place where the mistake
+    is found.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15250#comment
+status: Solved
+record: -1

@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: <code>r</code> and <code>t</code>
+- text: <code>b</code> and <code>t</code>
+- text: <code>a</code> and <code>r</code>
+- text: <code>w</code> and <code>b</code>
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15107#comment
+status: Solved
+record: -1

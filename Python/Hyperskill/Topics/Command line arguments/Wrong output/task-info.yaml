@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: <code>["multiply_two_numbers.py 7 6"]</code>
+- text: <code>["my_script.py", 19, 32]</code>
+- text: <code>["make_this.py"]</code>
+- text: <code>["count_lines.py", "my_file.txt"]</code>
+- text: <code>"my_first_script.py 3"</code>
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7985#comment
+status: Solved
+record: -1

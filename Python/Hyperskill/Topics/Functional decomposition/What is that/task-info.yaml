@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: 'A process of splitting a large problem into smaller, simpler tasks. '
+- text: A program debugging method.
+- text: A process of combining several functions into a single complex one.
+- text: A program testing method.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15770#comment
+status: Unchecked
+record: -1
+custom_name: What is that?

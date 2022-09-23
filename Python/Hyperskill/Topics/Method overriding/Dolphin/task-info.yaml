@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Mammal:
+        def __init__(self):
+            self.bio_class = "mammal"
+
+        def greet(self):
+            print("I am a {}!".format(self.bio_class))
+
+
+    # create class Dolphin here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7636#comment
+status: Unchecked
+record: -1

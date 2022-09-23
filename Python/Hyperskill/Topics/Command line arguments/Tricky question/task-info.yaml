@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: A list with the script's name and all arguments specified by the user
+- text: An empty list
+- text: A string with the script's name
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7982#comment
+status: Solved
+record: -1

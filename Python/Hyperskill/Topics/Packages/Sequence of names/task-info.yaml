@@ -1,0 +1,9 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: from scipy.sparse import csgraph_from_dense
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11444#comment
+status: Solved
+record: -1

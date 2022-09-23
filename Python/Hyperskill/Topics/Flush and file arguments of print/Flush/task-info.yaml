@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Without <code>flush</code>, the content will be written to the file only when
+    it is closed or when the buffer is full.
+- text: It is a keyword argument, and you have to specify it when calling the function.
+- text: It can be used without specifying the file argument.
+- text: Its default parameter is <code>True</code>.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/14991#comment
+status: Unchecked
+record: -1

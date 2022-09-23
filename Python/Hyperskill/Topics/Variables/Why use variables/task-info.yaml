@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: We need variables to make code more complex and redundant.
+- text: We must use variables when calculating really large numbers.
+- text: We use variables to store values and access them by name later.
+- text: Variables typically make code less comprehensible.
+- text: As per code style guidelines, we use variables to have more lines of code.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6585#comment
+status: Solved
+record: -1
+custom_name: Why use variables?

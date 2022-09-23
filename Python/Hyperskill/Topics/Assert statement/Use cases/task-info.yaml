@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Yes, <code>assert</code> is used mainly for data validation and <code>raise</code>
+    is used for debugging.
+- text: No, there is no difference between their use cases.
+- text: Yes, <code>raise</code> is used mainly for data validation and <code>assert</code>
+    is used for debugging.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/14594#comment
+status: Unchecked
+record: -1

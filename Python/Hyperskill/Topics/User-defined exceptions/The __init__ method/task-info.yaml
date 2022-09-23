@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def check_word(word):
+        ...
+
+    def error_handling(word):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10225#comment
+status: Unchecked
+record: -1

@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    str_1 = input()
+    str_2 = input()
+    str_3 = input()
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6814#comment
+status: Solved
+record: -1

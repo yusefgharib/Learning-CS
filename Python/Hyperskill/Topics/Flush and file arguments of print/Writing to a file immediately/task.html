@@ -1,0 +1,23 @@
+<h2>Writing to a file immediately</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Let's suppose you need to write a very long list to a file and want to see how the writing is performed — for example, to monitor the size of the file and start writing to another one if the size exceeds some threshold. How would you do that?</p> 
+  <p>Look at the code we have written:</p> 
+  <pre><code class="language-python">long_list = list(range(1000000))
+file_name = "my_file.txt"
+opened_file = open(file_name, 'w')
+for item in long_list:
+    # the next line should write each item to my_file.txt
+    print(...)
+opened_file.close()</code></pre> 
+  <p>In the text field below, write the <code class="language-python">print()</code> command with correct arguments. For example, you might write <span style="color: #000000;"><code class="language-python">print(item)</code> but, obviously, you should specify some other arguments as well. Don't forget about PEP8!</span></p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-899').style.display='inline'"> Hint </button> </p>
+  <div id="hint-899" style="display:none;">
+   Remember that if you just use the argument 
+   <code class="language-python">file</code>, the 
+   <code class="language-python">print()</code> function will flush the file only when the buffer is full. You should also use another argument.
+  </div>
+  <p></p>
+ </body>
+</html>

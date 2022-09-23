@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: 4
+- text: 5
+- text: 8
+- text: 9
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6602#comment
+status: Solved
+record: -1

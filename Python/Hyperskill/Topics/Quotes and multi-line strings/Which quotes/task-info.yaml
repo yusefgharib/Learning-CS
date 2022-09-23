@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Any quotes are fine
+- text: Triple quotes
+- text: Single quotes
+- text: Double quotes
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6879#comment
+status: Solved
+record: -1
+custom_name: Which quotes?

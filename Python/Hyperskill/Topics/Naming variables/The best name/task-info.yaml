@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: the_home_address_of_the_user
+- text: userHomeAddress
+- text: user_home_address
+- text: _uha
+- text: userhomeaddress
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6875#comment
+status: Solved
+record: -1

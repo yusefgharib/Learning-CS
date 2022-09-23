@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # finish the function
+    def find_the_parent(child):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9324#comment
+status: Unchecked
+record: -1

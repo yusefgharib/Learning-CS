@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: End of file
+- text: End of function
+- text: End of form
+- text: End of formula
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6055#comment
+status: Solved
+record: -1

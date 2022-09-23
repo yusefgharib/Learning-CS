@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: The <code>help</code> function can remind us whether a function takes named
+    or positional arguments.
+- text: For named arguments, the order of passed values doesn't matter much.
+- text: When a keyword argument is indicated, you shouldn't put spaces around the
+    equality signs.
+- text: You can mention each parameter as many times as you want when calling a function.
+- text: It's important to write them after positional arguments when you call a function.
+- text: There can be up to three parameters in a function.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15517#comment
+status: Solved
+record: -1

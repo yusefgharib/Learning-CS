@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: PEP 8 doesn't recommend it.
+- text: It doesn't really import anything.
+- text: It imports random things.
+- text: It doesn't work without the <code>__all__</code> statement.
+- text: It is time-consuming.
+- text: It is less readable.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15138#comment
+status: Solved
+record: -1

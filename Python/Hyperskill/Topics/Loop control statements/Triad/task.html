@@ -1,0 +1,23 @@
+<h2>Triad</h2>
+<html>
+ <head></head>
+ <body>
+  <p>What will be the output of the following code?</p> 
+  <pre><code class="language-python">limit = 25
+numbers = []
+while len(numbers) &lt; 5:
+    for i in range(limit):
+        if i % 3 != 0:
+            continue
+        else:
+            numbers.append(i)
+
+print(len(numbers))</code></pre> 
+  <p>The list method <code class="language-python">list.append(item)</code> adds an item to the end of a list.</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-384').style.display='inline'"> Hint </button> </p>
+  <div id="hint-384" style="display:none;">
+   Note that there are two loops: the inner and the outer one.
+  </div>
+  <p></p>
+ </body>
+</html>

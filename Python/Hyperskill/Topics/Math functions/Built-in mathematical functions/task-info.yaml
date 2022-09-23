@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: abs
+- text: round
+- text: min
+- text: floor
+- text: max
+- text: ceil
+- text: sin
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6258#comment
+status: Solved
+record: -1

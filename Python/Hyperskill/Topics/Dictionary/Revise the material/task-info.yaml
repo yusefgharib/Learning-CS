@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Any datatype can be a value in a dictionary.
+- text: Dictionaries are immutable.
+- text: Since Python 3.7, dictionaries preserve the insertion order.
+- text: Any datatype can be a key in a dictionary.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6484#comment
+status: Solved
+record: -1

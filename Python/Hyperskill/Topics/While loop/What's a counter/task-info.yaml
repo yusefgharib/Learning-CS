@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: changes its value after each iteration
+- text: increases its value after each iteration
+- text: doesn’t change its value after each iteration
+- text: decreases its value after each iteration
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5941#comment
+status: Solved
+record: -1
+custom_name: What's a counter?

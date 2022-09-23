@@ -1,0 +1,18 @@
+<h2>Accessing result</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Below you can see a class that represents the location of some object. Look at the function <code class="language-python">coordinates</code>. How can we get the result?</p> 
+  <pre><code class="language-python">class Location:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    @property
+    def coordinates(self):
+        return [self.x, self.y]
+
+loc = Location(1, 2)</code></pre>
+ </body>
+</html>

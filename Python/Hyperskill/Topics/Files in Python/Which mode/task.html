@@ -1,0 +1,16 @@
+<h2>Which mode?</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Suppose, you want to open some file for both reading and writing. You don't want to lose the contents of your file and you also don't want to get an error if by some chance the file doesn't exist. Which mode should you choose?</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-287').style.display='inline'"> Hint </button> </p>
+  <div id="hint-287" style="display:none;">
+   Remember that mode 
+   <code class="java">'w'</code> overwrites the contents of a file, while 
+   <code class="java">'r'</code> will result in an error if the file doesn't exist yet. Therefore, the 
+   <code class="java">'a'</code> option would be a better choice, since it creates a file for writing and doesn't delete the contents if it exists. However, you will have to combine 
+   <code class="java">'a'</code> with another mode if you also want to read the file.
+  </div>
+  <p></p>
+ </body>
+</html>

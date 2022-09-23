@@ -1,0 +1,30 @@
+<html><body><h5 id="description">Description</h5>
+<p>You have the plasmid, and you have the GFP gene... Boom! The <strong>ligation</strong> has begun.<br/>
+Ligation is the process of gluing the complementary sticky ends together. It's time to insert the GFP with the sticky ends into the gap in the plasmid.</p>
+<h5 id="objective">Objective</h5>
+<p>Compose the function that performs the ligation. It should get the sequence of the plasmid with the sticky ends and the sequence of the GFP gene (with the sticky ends as well) from the file. Each GFP sticky end is complementary to the appropriate plasmid end. The function "stitches" the GFP and plasmid together by gluing the sticky ends.</p>
+<p>To better understand the process take a look at the picture below:</p>
+<p><img alt="" height="190" name="glowing_bacteria_step5.png" src="https://ucarecdn.com/2b67207d-73f5-41c5-9bbe-58203815dfb5/" width="582"/></p>
+<p>The original plasmid strand is marked in black, the complementary plasmid strand in blue, the original GFP strand in green, and the complementary GFP strand in purple.</p>
+<p>To complete the stage, your program should:</p>
+<ol>
+<li>Take <em>the file's name </em>as input from the console and parse its contents;</li>
+<li>Perform the ligation by gluing each complementary plasmid end with the complementary GFP end. At this step, we recommend that you implement a function that returns the double-stranded ligation result so you can reuse it in the last stage;</li>
+<li>Print the double-stranded ligation result. Separate two sequences with a newline character (<code class="language-python">\n</code>).</li>
+</ol>
+<p>Additionally, we would like you to familiarize an input file structure:</p>
+<ul>
+<li>The first line contains four parts: the first two are the original plasmid strand (the second part has the sticky end), and the last two belong to the complementary plasmid strand (the first part with the sticky end).</li>
+<li>The second line contains two parts. The first part is the original GFP strand (sticky end on the left), and the last part is the complementary strand (sticky end on the right).</li>
+</ul>
+<p>You have an example file <a href="https://stepik.org/media/attachments/lesson/560993/example.txt" rel="noopener noreferrer nofollow" target="_blank">example.txt</a>. Use it to test that your program takes <em>a file name</em> as input and processes it correctly.</p>
+<h5 id="example">Example</h5>
+<p>The greater-than symbol followed by a space (<code class="language-python">&gt; </code>) represents the console input.</p>
+<p><strong>Example 1:</strong></p>
+<p><em>example1.txt file content</em></p>
+<pre><code class="language-no-highlight">ATCGTTCGTGTGCATGT TGCATCTGTATCTAGCGC TAGCAAGCACACGTACAACGT AGACATAGATCGCG
+TGCAXXXXXXXXXXXXX XXXXXXXXXXXXXACGT</code></pre>
+<p><em>The output of your program</em></p>
+<pre><code class="language-python">&gt; example1.txt
+ATCGTTCGTGTGCATGTTGCAXXXXXXXXXXXXXTGCATCTGTATCTAGCGC
+TAGCAAGCACACGTACAACGTXXXXXXXXXXXXXACGTAGACATAGATCGCG</code></pre></body></html>

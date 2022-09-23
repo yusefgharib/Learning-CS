@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: bark
+- text: greet
+- text: play
+- text: sleep
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6932#comment
+status: Unchecked
+record: -1

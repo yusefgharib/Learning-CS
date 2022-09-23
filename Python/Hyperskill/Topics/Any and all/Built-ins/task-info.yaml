@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: These functions can take another function as an argument.
+- text: You are NOT supposed to declare or import these functions.
+- text: Without importing, any() and all() are NOT available.
+- text: You should declare these functions before using.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7802#comment
+status: Solved
+record: -1

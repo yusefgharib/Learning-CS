@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def check_integer(num):
+        ...
+
+    def error_handling(num):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10224#comment
+status: Unchecked
+record: -1

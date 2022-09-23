@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: list
+- text: float
+- text: integer
+- text: NaN
+- text: string
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7801#comment
+status: Solved
+record: -1

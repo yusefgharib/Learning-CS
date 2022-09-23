@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Using human-readable names for variables
+- text: Using not more than 10 comments for a script
+- text: Commenting every line of code
+- text: Writing self-explanatory simple code
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6442#comment
+status: Solved
+record: -1
