@@ -13,5 +13,6 @@ files:
 
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/8703#comment
-status: Solved
+status: Unchecked
 record: -1
+local_check: false

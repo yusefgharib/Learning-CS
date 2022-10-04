@@ -1,0 +1,87 @@
+type: edu
+files:
+- name: honest_calc.py
+  visible: true
+  text: "from operator import add, sub, mul, truediv\ndef is_one_digit(x):\n    return\
+    \ -10 < x < 10 and x.is_integer()\ndef check(x, y, o):\n    msg = \"\"\n    msg\
+    \ += \" ... lazy\" if is_one_digit(x) and is_one_digit(y) else \"\"\n    msg +=\
+    \ \" ... very lazy\" if (x == 1.0 or y == 1.0) and o == \"*\" else \"\"\n    msg\
+    \ += \" ... very, very lazy\" if (x == 0.0 or y == 0.0) and (o in \"*+-\") else\
+    \ \"\"\n    print(\"You are\" + msg if msg != \"\" else \"\")\nM = 0.0\nwhile\
+    \ True:\n    try:\n        num1, operator, num2 = input(\"Enter an equation\"\
+    ).split()\n        num1 = float(M) if num1 == 'M' else float(num1)\n        num2\
+    \ = float(M) if num2 == 'M' else float(num2)\n        check(num1, num2, operator)\n\
+    \        values = {\"+\": add, \"-\": sub, \"*\": mul}\n        if operator in\
+    \ values:\n            result = values[operator](num1, num2)  \n        else:\n\
+    \            truediv(num1, num2)\n        print(result)\n        if input(\"Do\
+    \ you want to store the result? (y / n):\") == 'y':\n            M = result  \n\
+    \        else:\n            M = 0\n        if input(\"Do you want to continue\
+    \ calculations? (y / n):\") == 'n':\n            break\n    except ZeroDivisionError:\n\
+    \        print(\"Yeah... division by zero. Smart move...\")\n    except ValueError:\n\
+    \        print(\"Do you even know what numbers are? Stay focused!\")\n    except\
+    \ KeyError:\n        print(\"Yes ... an interesting math operation. You've slept\
+    \ through all classes, haven't you?\")\n    \n\n"
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from hstest import StageTest, CheckResult, WrongAnswer, dynamic_test, TestedProgram
+
+    msg = ["Enter an equation",
+           "Do you even know what numbers are? Stay focused!",
+           "Yes ... an interesting math operation. You've slept through all classes, haven't you?",
+           "Yeah... division by zero. Smart move...",
+           "Do you want to store the result? (y / n):",
+           "Do you want to continue calculations? (y / n):",
+           " ... lazy",
+           " ... very lazy",
+           " ... very, very lazy",
+           "You are",
+           "Are you sure? It is only one digit! (y / n)",
+           "Don't be silly! It's just one number! Add to the memory? (y / n)",
+           "Last chance! Do you really want to embarrass yourself? (y / n)"
+    ]
+
+
+    def add_enter(txt):
+        return "\n".join([txt, msg[0]])
+
+
+    def add_memory(txt):
+        return "\n".join([txt, msg[4]])
+
+
+    data = [(("4 * 5.0", "\n".join([msg[9] + msg[6], add_memory("20.0")])), ("n", msg[5]), ("n", "")),
+            (("2 + 5.5", add_memory("7.5")), ("y", msg[5]), ("y", msg[0]), ("M - 9", add_memory("-1.5")), ("n", msg[5]), ("n", "")),
+            (("225 / 15", add_memory("15.0")), ("y", msg[5]), ("y",msg[0]),
+             ("1 * 5", "\n".join([msg[9] + msg[6] + msg[7], add_memory("5.0")])), ("y", msg[10]), ("y", msg[11]), ("n", msg[5]), ("y", msg[0]),
+            ("M - 10", add_memory("5.0")), ("y", msg[10]), ("y", msg[11]), ("y", msg[12]), ("y", msg[5]), ("y", msg[0]),
+             ("M / M",  "\n".join([msg[9] + msg[6], add_memory("1.0")])), ("n", msg[5]), ("n", "")),
+           ]  # (input data, msg sentence])
+
+
+    class HonestCalc(StageTest):
+        @dynamic_test(data=data)
+        def test(self, *items):
+            pr = TestedProgram()
+            output = pr.start()
+            if msg[0] not in output:
+                return CheckResult.wrong(f"Expected: ({msg[0]});\nFound:    ({output.strip()})")
+            for item in items:
+                output = pr.execute(item[0])
+                if item[1] != output.strip():
+                    return CheckResult.wrong(f"Expected:\n{item[1]}\nFound:\n{output.strip()}")
+            if not pr.is_finished():
+                return CheckResult.wrong("Your program unnecessarily waiting for input.")
+            return CheckResult.correct()
+
+
+    if __name__ == '__main__':
+        HonestCalc().run_tests()
+  learner_created: false
+- name: test.txt
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/projects/208/stages/1043/implement#comment
+status: Solved
+record: 4

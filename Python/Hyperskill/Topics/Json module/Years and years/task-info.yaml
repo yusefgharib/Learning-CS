@@ -13,4 +13,7 @@ files:
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/9003#comment
 status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 10 Jul 2022 22:54:29 UTC
 record: -1

@@ -1,0 +1,54 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+  text: |-
+    from hstest import CheckResult, StageTest, WrongAnswer, dynamic_test, TestedProgram
+
+    CORRECT = "CTGCAGACACGTTCATGATGACAAGACGTCAGTGAACTTAAGCTATGGGTCGACACACGTGATGGAGGAA"
+
+    class GlowingBacteriaTest(StageTest):
+        @dynamic_test
+        def test(self):
+            users_program = TestedProgram()
+            users_program.start()
+
+            if not users_program.is_waiting_input():
+                raise WrongAnswer("You program should input the string")
+
+            reply = users_program.execute("GACGTCTGTGCAAGTACTACTGTTCTGCAGTCACTTGAATTCGATACCCAGCTGTGTGCACTACCTCCTT")
+            reply = reply.replace("\n", "")
+
+            # Check the format of user's answer
+            if len(reply.strip()) == 0:
+                raise WrongAnswer("Your answer is an empty string")
+            elif ' ' in reply:
+                raise WrongAnswer("Please remove the spaces")
+            elif not reply.isupper():
+                raise WrongAnswer("Use only capital letters in your answer")
+            elif len(reply) != 70:
+                raise WrongAnswer("Total length of the answer must be 70")
+
+            # If the format is OK, let's check the content
+            # if reply[0:10] == "CTGCAGACAC" \
+            #         and reply[40:50] == "AGCTATGGGT" \
+            #         and reply[60:70] == "GATGGAGGAA":
+            #     return CheckResult.correct()
+
+            else:
+                if reply != CORRECT:
+                    raise WrongAnswer("The output strand is wrong. Do not forget about the complementarity")
+                else:
+                    return CheckResult.correct()
+
+
+    if __name__ == '__main__':
+        GlowingBacteriaTest().run_tests()
+  learner_created: false
+- name: bacteria.py
+  visible: true
+  text: '# write your program here'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15914#comment
+status: Solved
+record: 4

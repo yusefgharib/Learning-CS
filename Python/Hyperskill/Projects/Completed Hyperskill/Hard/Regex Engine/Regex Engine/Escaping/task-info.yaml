@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: tests.py
+  visible: true
+  learner_created: true
+- name: regex/regex.py
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/10244#comment
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Thu, 25 Aug 2022 07:32:01 UTC
+record: 6
